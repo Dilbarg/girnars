@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WIN Edge Bands — Shop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">WIN Edge Bands</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <a href="admin.php" class="admin-link">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <h1>Premium Edge Banding — Made in India</h1>
+        <p>High-quality PVC edge bands — multiple sizes & finishes. Fast delivery.</p>
+        <button class="cta" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Explore Products</button>
+      </div>
+    </section>
+
+    <section id="about" class="container section">
+        <div>
+        <h2>About Us</h2>
+        <p>WIN Edge Bands has been proudly supplying high-quality edge banding solutions across Rajasthan since 2006. Our strong distribution network and long-standing relationships with dealers have made us a trusted name in the furniture and interior industry.</p>
+        <p>One of our key pillars is <strong>Mr.Pradeep Kumar</strong>, Co-Founder and Retail Partner, who has been actively serving customers from his store in New Atish Market, Jaipur Near Metro station . With more than 18 years of experience, he has been instrumental in bringing WIN Edge Bands and other premium products closer to customers.</p>
+        <p>Today, we supply <strong>WIN Edge Bands</strong>, <strong>PVC Edge Bands</strong>, <strong>MERAKI Acrylic Sheets</strong>, and <strong>EDGE Lock</strong> products, making us a one-stop destination for interior and furniture solutions.</p>
+      </div>
+    </section>
+
+    <section id="products" class="container section">
+      <h2>Products</h2>
+
+      <div class="grid" id="productGrid">
+        <!-- JavaScript will populate product cards -->
+      </div>
+    </section>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal hidden">
+      <div class="modal-box">
+        <button class="modal-close" onclick="closeOrderModal()">×</button>
+        <h3 id="modalTitle">Order</h3>
+
+        <div class="row">
+          <label>Size</label>
+          <select id="orderSize">
+            <option>18mm x 10m</option>
+            <option>22mm x 0.8mm</option>
+            <option>25mm x 1.3mm</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label>Finish</label>
+          <select id="orderFinish">
+            <option>Matt</option>
+            <option>High Gloss</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label>Quantity</label>
+          <input type="number" id="orderQty" min="1" value="1" />
+        </div>
+
+        <div class="row">
+          <label>Your Name</label>
+          <input type="text" id="custName" />
+        </div>
+
+        <div class="row">
+          <label>Your Email</label>
+          <input type="email" id="custEmail" />
+        </div>
+
+        <div class="row">
+          <label>Delivery Address</label>
+          <textarea id="custAddress" rows="3"></textarea>
+        </div>
+
+        <div class="row">
+          <label>Payment Method</label>
+          <select id="orderPayment">
+            <option>Cash on Delivery</option>
+            <option>Online (UPI/Google Pay)</option>
+            <option>Card (Razorpay)</option>
+          </select>
+        </div>
+
+        <div class="modal-actions">
+          <button class="btn primary" onclick="confirmOrder()">Confirm & Place Order</button>
+          <button class="btn" onclick="closeOrderModal()">Cancel</button>
+        </div>
+
+        <div id="orderMsg" class="info" style="display:none"></div>
+      </div>
+    </div>
+
+
+    <!-- Contact -->
+  <section id="contact" class="container fade-in">
+    <h2>Contact</h2>
+    <div style="display:grid;grid-template-columns:1fr 320px;gap:1rem;">
+      <form class="card" id="contactForm">
+        <label>Name<input required placeholder="Your name"></label>
+        <label>Email<input required type="email" placeholder="you@example.com"></label>
+        <label>Message<textarea rows="4" placeholder="How can we help?"></textarea></label>
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <aside class="card">
+        <h3>Reach us</h3>
+        <p><strong>SHIV SHAKTI ENTERPRISES</strong><br>A-155, New Atish Market, Mansrovar, Jaipur, Rajasthan – 302020</p>
+        <p><strong>Phone:</strong> +91 6378399967<br><strong>Email:</strong> shivshaktienterprises1601@gmail.com</p>
+      </aside>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 WIN Edge Bands — All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
